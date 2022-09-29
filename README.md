@@ -20,13 +20,20 @@ Once the plugin is installed, check out the demos below. Each demo contains inst
 
 ## Demos
 
+### [Add Breakpoint](./src/main/java/spp/demo/command/AddBreakpoint.java)
+
+This demonstration shows how to add a "non-breaking breakpoint" to a running application. The **Add Breakpoint** command
+is useful for debugging production applications without impacting the end user.
+
+For more information, see the [Add Breakpoint](./src/main/java/spp/demo/command/AddBreakpoint.java) class.
+
 ### [Tail Logs](./src/main/java/spp/demo/command/TailLogs.java)
 
 This demonstration shows how to tail logs from a running application. Logs can be filtered by individual statements,
 methods, and classes. The **Tail Logs** command works for any application that uses a logging framework that is
 supported by Source++.
 
-For more information, see the Javadocs in the [Tail Logs](./src/main/java/spp/demo/command/TailLogs.java) class.
+For more information, see the [Tail Logs](./src/main/java/spp/demo/command/TailLogs.java) class.
 
 ## Bugs & Features
 
