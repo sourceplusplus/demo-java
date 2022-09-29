@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
  * Open the Source++ Command Palette with `Ctrl+Shift+S` and search for `Tail Logs`.
  * </p>
  * <p>
- * <b>Source code:</b>
+ * <b>Command source code:</b>
  * <a href="https://github.com/sourceplusplus/jetbrains-commander/blob/master/resources/.spp/plugins/tail-logs/plugin.kts">Live Logs Command</a>
  * </p>
  */
