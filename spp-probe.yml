@@ -1,0 +1,8 @@
+spp:
+  platform_host: "localhost"
+  platform_port: 12800
+skywalking:
+  logging:
+    level: "WARN"
+  agent:
+    service_name: "demo-java"
