@@ -14,9 +14,9 @@ package spp.demo.command;
 public class AddBreakpoint {
 
     /**
-     * Execute the <b>Add Breakpoint</b> command with your cursor on line 29 to set up a non-breaking breakpoint
-     * <b>after</b> that line. This will open the breakpoint configuration inlay. Hit enter to make the breakpoint
-     * non-conditional. Hit enter again make the breakpoint single-use and create the breakpoint.
+     * Execute the <b>Add Breakpoint</b> command with your cursor on line 30 to set up a non-breaking breakpoint
+     * <b>before</b> the execution of that line. This will open the breakpoint configuration inlay. Hit enter to make
+     * the breakpoint non-conditional. Hit enter again make the breakpoint single-use and create the breakpoint.
      * <p>
      * Once the breakpoint is created, the breakpoint status inlay will appear. This inlay will show the current
      * status of the breakpoint and will be marked as <b>Complete</b> once the breakpoint is hit. Once the breakpoint
@@ -27,5 +27,6 @@ public class AddBreakpoint {
     public void simpleBreakpoint() {
         double randomNumber = Math.random();
         boolean isEven = randomNumber % 2 == 0;
+        System.out.println("Random number is " + randomNumber + " and is " + (isEven ? "even" : "odd"));
     }
 }
