@@ -8,6 +8,13 @@
 This project holds standalone demonstrations of Source++ features available for Java. These demonstrations are meant to
 be used as a reference for how to use Source++ in your own projects.
 
+## How to use?
+
+Install the Source++ plugin via the JetBrains Marketplace by searching for: `Source++`.
+Alternatively, you can download the plugin directly from [here](https://plugins.jetbrains.com/plugin/12033-source-).
+
+Once the plugin is installed, check out the demos below. Each demo contains instructions explaining how to use it.
+
 ## Demos
 
 ### [Tail Logs](./src/main/java/spp/demo/command/TailLogs.java)
