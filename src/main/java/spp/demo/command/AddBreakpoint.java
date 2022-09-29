@@ -14,7 +14,7 @@ package spp.demo.command;
 public class AddBreakpoint {
 
     /**
-     * Execute the <b>Add Breakpoint</b> command with your cursor on line 28 to set up a non-breaking breakpoint
+     * Execute the <b>Add Breakpoint</b> command with your cursor on line 29 to set up a non-breaking breakpoint
      * <b>after</b> that line. This will open the breakpoint configuration inlay. Hit enter to make the breakpoint
      * non-conditional. Hit enter again make the breakpoint single-use and create the breakpoint.
      * <p>
@@ -26,5 +26,6 @@ public class AddBreakpoint {
      */
     public void simpleBreakpoint() {
         double randomNumber = Math.random();
+        boolean isEven = randomNumber % 2 == 0;
     }
 }
