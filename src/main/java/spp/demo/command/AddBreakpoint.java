@@ -27,6 +27,6 @@ public class AddBreakpoint {
     public void simpleBreakpoint() {
         double randomNumber = Math.random();
         boolean isEven = randomNumber % 2 == 0;
-        System.out.println("Random number is " + randomNumber + " and is " + (isEven ? "even" : "odd"));
+        System.out.println(randomNumber + " is " + (isEven ? "even" : "odd"));
     }
 }
