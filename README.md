@@ -7,6 +7,8 @@
 This project holds standalone demonstrations of Source++ features available for Java. These demonstrations are meant to
 be used as a reference for how to use Source++ in your own projects.
 
+## Demos
+
 ### [Tail Logs](./src/main/java/spp/demo/command/TailLogs.java)
 
 This demonstration shows how to tail logs from a running application. Logs can be filtered by individual statements,
