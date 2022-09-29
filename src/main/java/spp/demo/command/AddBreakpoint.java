@@ -1,5 +1,7 @@
 package spp.demo.command;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 /**
  * This class is used to demonstrate the `Add Breakpoint` command.
  * <p>
@@ -14,7 +16,7 @@ package spp.demo.command;
 public class AddBreakpoint {
 
     /**
-     * Execute the <b>Add Breakpoint</b> command with your cursor on line 30 to set up a non-breaking breakpoint
+     * Execute the <b>Add Breakpoint</b> command with your cursor on line 32 to set up a non-breaking breakpoint
      * <b>before</b> the execution of that line. This will open the breakpoint configuration inlay. Hit enter to make
      * the breakpoint non-conditional. Hit enter again make the breakpoint single-use and create the breakpoint.
      * <p>
@@ -25,7 +27,7 @@ public class AddBreakpoint {
      * </p>
      */
     public void simpleBreakpoint() {
-        double randomNumber = Math.random();
+        int randomNumber = ThreadLocalRandom.current().nextInt();
         boolean isEven = randomNumber % 2 == 0;
         System.out.println(randomNumber + " is " + (isEven ? "even" : "odd"));
     }
