@@ -1,6 +1,7 @@
 # ![](https://github.com/sourceplusplus/sourceplusplus/blob/master/.github/media/sourcepp_logo.svg)
 
 ![GitHub](https://img.shields.io/github/license/sourceplusplus/protocol)
+![GitHub release](https://img.shields.io/github/v/release/sourceplusplus/sourceplusplus?include_prereleases)
 
 ## What is this?
 
