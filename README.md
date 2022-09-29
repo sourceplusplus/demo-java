@@ -5,7 +5,7 @@
 
 ## What is this?
 
-This project holds standalone demonstrations of Source++ features available for Java. These demonstrations are meant to
+This project holds standalone demonstrations of Source++ features available for Java applications. These demonstrations are meant to
 be used as a reference for how to use Source++ in your own projects.
 
 ## How to use?
