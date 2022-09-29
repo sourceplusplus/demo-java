@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
  * </p>
  * <p>
  * <b>Command source code:</b>
- * <a href="https://github.com/sourceplusplus/jetbrains-commander/blob/master/resources/.spp/plugins/tail-logs/plugin.kts">Live Logs Command</a>
+ * <a href="https://github.com/sourceplusplus/jetbrains-commander/blob/master/resources/.spp/plugins/tail-logs/plugin.kts">Tail Logs</a>
  * </p>
  */
 public class TailLogs {
