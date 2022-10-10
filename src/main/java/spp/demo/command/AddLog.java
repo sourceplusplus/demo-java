@@ -35,7 +35,7 @@ public class AddLog {
 
     /**
      * The <b>Add Log</b> command can also be used with the <b>Tail Logs</b> command. Execute the
-     * <b>Tail Logs</b> command with your cursor anywhere inside the following method. Then execute the
+     * <b>Tail Logs</b> command with your cursor between or on lines 42-44. Then execute the
      * <b>Add Log</b> command with your cursor on line 45. Try outputting the following message:<br>
      * <b>And is even: $isEven</b>
      */
