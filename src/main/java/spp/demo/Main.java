@@ -1,12 +1,10 @@
 package spp.demo;
 
 import spp.demo.command.AddBreakpoint;
+import spp.demo.command.AddLog;
 import spp.demo.command.TailLogs;
 
 public class Main {
-
-    private static AddBreakpoint addBreakpoint = new AddBreakpoint();
-    private static TailLogs tailLogs = new TailLogs();
 
     public static void main(String[] args) throws Exception {
         while (true) {
@@ -17,15 +15,20 @@ public class Main {
 
     public static void executeDemos() {
         triggerAddBreakpoint();
+        triggerAddLog();
         triggerTailLogs();
     }
 
-
     public static void triggerAddBreakpoint() {
-        addBreakpoint.simpleBreakpoint();
+        new AddBreakpoint().simpleBreakpoint();
+    }
+
+    public static void triggerAddLog() {
+        new AddLog().simpleLog();
     }
 
     public static void triggerTailLogs() {
+        TailLogs tailLogs = new TailLogs();
         tailLogs.tailClassLogs();
         tailLogs.tailMethodLogs();
         tailLogs.tailStatementLogs();
