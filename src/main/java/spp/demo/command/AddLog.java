@@ -1,5 +1,8 @@
 package spp.demo.command;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
@@ -15,15 +18,30 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public class AddLog {
 
+    private static final Logger log = LoggerFactory.getLogger(AddLog.class);
+
     /**
-     * Execute the <b>Add Log</b> command with your cursor on line 28 to set up a live log
+     * Execute the <b>Add Log</b> command with your cursor on line 34 to set up a live log
      * <b>before</b> the execution of that line. This will open the log configuration inlay. This inlay
      * allows you to input a new log message to output. You can use the "$" symbol to reference
      * variables in the current scope. You can also use the "Ctrl+Space" shortcut to see a list of
-     * available variables. Try outputting the following message: <b>Random number: $randomNumber. Even: $isEven</b>
+     * available variables. Try outputting the following message:<br>
+     * <b>Random number: $randomNumber. Even: $isEven</b>
      */
     public void simpleLog() {
         int randomNumber = ThreadLocalRandom.current().nextInt();
         boolean isEven = randomNumber % 2 == 0;
+    }
+
+    /**
+     * The <b>Add Log</b> command can also be used with the <b>Tail Logs</b> command. Execute the
+     * <b>Tail Logs</b> command with your cursor anywhere inside the following method. Then execute the
+     * <b>Add Log</b> command with your cursor on line 46. Try outputting the following message:<br>
+     * <b>And is even: $isEven</b>
+     */
+    public void simpleLogWithTailLogs() {
+        int randomNumber = ThreadLocalRandom.current().nextInt();
+        boolean isEven = randomNumber % 2 == 0;
+        log.info("Random number: {}", randomNumber);
     }
 }

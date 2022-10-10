@@ -24,7 +24,9 @@ public class Main {
     }
 
     public static void triggerAddLog() {
-        new AddLog().simpleLog();
+        AddLog addLog = new AddLog();
+        addLog.simpleLog();
+        addLog.simpleLogWithTailLogs();
     }
 
     public static void triggerTailLogs() {
