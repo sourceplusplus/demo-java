@@ -26,7 +26,7 @@ public class AddLog {
      * allows you to input a new log message to output. You can use the "$" symbol to reference
      * variables in the current scope. You can also use the "Ctrl+Space" shortcut to see a list of
      * available variables. Try outputting the following message:<br>
-     * <b>Random number: $randomNumber. Even: $isEven</b>
+     * <b>Random number: $randomNumber - Even: $isEven</b>
      */
     public void simpleLog() {
         int randomNumber = ThreadLocalRandom.current().nextInt();
