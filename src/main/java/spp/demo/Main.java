@@ -1,6 +1,5 @@
 package spp.demo;
 
-import io.micronaut.http.client.HttpClient;
 import io.micronaut.runtime.Micronaut;
 import spp.demo.command.AddBreakpoint;
 import spp.demo.command.AddLog;
@@ -44,19 +43,18 @@ public class Main {
     }
 
     public static void triggerEndpoints() throws Exception {
-        HttpClient client = HttpClient.create(new URL("http://localhost:8080"));
+        URL baseUrl = new URL("http://localhost:8080");
         try {
-            client.toBlocking().retrieve("/indicator/fail-100-percent");
+            new URL(baseUrl, "/indicator/fail-100-percent").openStream().close();
         } catch (Exception ignore) {
         }
         try {
-            client.toBlocking().retrieve("/indicator/fail-75-percent");
+            new URL(baseUrl, "/indicator/fail-75-percent").openStream().close();
         } catch (Exception ignore) {
         }
         try {
-            client.toBlocking().retrieve("/indicator/fail-50-percent");
+            new URL(baseUrl, "/indicator/fail-50-percent").openStream().close();
         } catch (Exception ignore) {
         }
-        client.close();
     }
 }

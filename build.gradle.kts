@@ -22,7 +22,6 @@ dependencies {
     implementation("ch.qos.logback:logback-classic:1.4.1")
 
     //used for endpoint indicators
-    implementation("io.micronaut:micronaut-http-client:3.6.4")
     implementation("io.micronaut:micronaut-http-server-netty:3.6.4")
     annotationProcessor("io.micronaut:micronaut-inject-java:3.6.4")
 }
