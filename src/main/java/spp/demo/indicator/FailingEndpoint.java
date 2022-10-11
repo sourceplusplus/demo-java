@@ -1,5 +1,6 @@
 package spp.demo.indicator;
 
+import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 
@@ -7,21 +8,23 @@ import io.micronaut.http.annotation.Get;
 public class FailingEndpoint {
 
     @Get("/fail-100-percent")
-    public void fail100Percent() {
-        throw new RuntimeException("Failed");
+    public HttpResponse<Void> fail100Percent() {
+        return HttpResponse.serverError();
     }
 
     @Get("/fail-75-percent")
-    public void fail75Percent() {
+    public HttpResponse<Void> fail75Percent() {
         if (Math.random() > 0.25) {
-            throw new RuntimeException("Failed");
+            return HttpResponse.serverError();
         }
+        return HttpResponse.ok();
     }
 
     @Get("/fail-50-percent")
-    public void fail50Percent() {
+    public HttpResponse<Void> fail50Percent() {
         if (Math.random() > 0.5) {
-            throw new RuntimeException("Failed");
+            return HttpResponse.serverError();
         }
+        return HttpResponse.ok();
     }
 }
