@@ -27,22 +27,16 @@ Once the plugin is installed, check out the demos below. Each demo contains inst
 This demonstration shows how to add a "non-breaking breakpoint" to a running application. The **Add Breakpoint** command
 is useful for debugging production applications without impacting the end user.
 
-For more information, see the [AddBreakpoint](./src/main/java/spp/demo/command/AddBreakpoint.java) class.
-
 ### [Add Log](./src/main/java/spp/demo/command/AddLog.java)
 
 This demonstration shows how to add a log statement to a running application. The **Add Log** command is useful for
 increasing the verbosity of a running application with logs that output directly into the IDE.
-
-For more information, see the [AddLog](./src/main/java/spp/demo/command/AddLog.java) class.
 
 ### [Tail Logs](./src/main/java/spp/demo/command/TailLogs.java)
 
 This demonstration shows how to tail logs from a running application. Logs can be filtered by individual statements,
 methods, and classes. The **Tail Logs** command works for any application that uses a logging framework that is
 supported by Source++.
-
-For more information, see the [TailLogs](./src/main/java/spp/demo/command/TailLogs.java) class.
 
 ## Bugs & Features
 
