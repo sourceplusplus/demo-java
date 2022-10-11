@@ -34,8 +34,8 @@ increasing the verbosity of a running application with logs that output directly
 
 ### [Tail Logs](./src/main/java/spp/demo/command/TailLogs.java)
 
-This demonstration shows how to follow existing logs from a running application. The **Tail Logs** command works for any
-application that uses a logging framework supported by Source++ (e.g. Log4j, Logback, SLF4J, etc.).
+This demonstration shows how to follow existing logs from a running application. The **Tail Logs** command works with
+most logging frameworks, including Log4j, Logback, and SLF4J.
 
 ## Bugs & Features
 
