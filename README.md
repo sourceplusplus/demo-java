@@ -19,8 +19,9 @@ from [here](https://plugins.jetbrains.com/plugin/12033-source-).
 
 Once the plugin is installed, check out the demos below. Each demo contains instructions explaining how to use it.
 
-> Note: You do not need to run this code to play with the demos. This application is hosted on our publicly accessible
-> servers.
+> **Note**
+>
+> You do not need to run this code to use the demos. This application is hosted on our publicly accessible servers.
 
 ## Demo: Live Commands
 
