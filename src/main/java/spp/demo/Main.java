@@ -64,5 +64,19 @@ public class Main {
             new URL(baseUrl, "/indicator/slow-1000ms").openStream().close();
         } catch (Exception ignore) {
         }
+
+        //high load endpoint indicator
+        for (int i = 0; i < 4; i++) {
+            try {
+                new URL(baseUrl, "/high-load-four-per-second").openStream().close();
+            } catch (Exception ignore) {
+            }
+        }
+        for (int i = 0; i < 2; i++) {
+            try {
+                new URL(baseUrl, "/high-load-two-per-second").openStream().close();
+            } catch (Exception ignore) {
+            }
+        }
     }
 }

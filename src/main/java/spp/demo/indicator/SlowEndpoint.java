@@ -20,7 +20,7 @@ import io.micronaut.http.annotation.Get;
 public class SlowEndpoint {
 
     /**
-     * Hover your mouse over the orange turtle icon on line 26 to see the endpoint's response time (2000ms).
+     * Hover your mouse over the turtle icon on line 26 to see the response time (~2000ms).
      */
     @Get("/slow-2000ms")
     public HttpResponse<Void> slow2000ms() {
@@ -32,7 +32,7 @@ public class SlowEndpoint {
     }
 
     /**
-     * Hover your mouse over the orange turtle icon on line 34 to see the endpoint's response time (1000ms).
+     * Hover your mouse over the turtle icon on line 34 to see the response time (~1000ms).
      */
     @Get("/slow-1000ms")
     public HttpResponse<Void> slow1000ms() {

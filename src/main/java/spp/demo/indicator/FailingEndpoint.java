@@ -20,7 +20,7 @@ import io.micronaut.http.annotation.Get;
 public class FailingEndpoint {
 
     /**
-     * Hover your mouse over the red bug icon on line 26 to see the endpoint's error rate (100%).
+     * Hover your mouse over the bug icon on line 26 to see the error rate (100%).
      */
     @Get("/fail-100-percent")
     public HttpResponse<Void> fail100Percent() {
@@ -28,7 +28,7 @@ public class FailingEndpoint {
     }
 
     /**
-     * Hover your mouse over the red bug icon on line 34 to see the endpoint's error rate (~50%).
+     * Hover your mouse over the bug icon on line 34 to see the error rate (~50%).
      */
     @Get("/fail-50-percent")
     public HttpResponse<Void> fail50Percent() {
