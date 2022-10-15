@@ -6,8 +6,12 @@ import spp.demo.command.AddLog;
 import spp.demo.command.TailLogs;
 
 import java.net.URL;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 public class Main {
+
+    private static final Executor executor = Executors.newCachedThreadPool();
 
     public static void main(String[] args) throws Exception {
         Micronaut.run(Main.class, args);
@@ -18,7 +22,7 @@ public class Main {
         }
     }
 
-    public static void executeDemos() throws Exception {
+    public static void executeDemos() {
         triggerAddBreakpoint();
         triggerAddLog();
         triggerTailLogs();
@@ -42,41 +46,30 @@ public class Main {
         tailLogs.tailStatementLogs();
     }
 
-    public static void triggerEndpoints() throws Exception {
-        URL baseUrl = new URL("http://localhost:8080");
-
+    public static void triggerEndpoints() {
         //failing endpoint indicator
-        try {
-            new URL(baseUrl, "/indicator/fail-100-percent").openStream().close();
-        } catch (Exception ignore) {
-        }
-        try {
-            new URL(baseUrl, "/indicator/fail-50-percent").openStream().close();
-        } catch (Exception ignore) {
-        }
+        callEndpoint("/indicator/fail-100-percent");
+        callEndpoint("/indicator/fail-50-percent");
 
         //slow endpoint indicator
-        try {
-            new URL(baseUrl, "/indicator/slow-2000ms").openStream().close();
-        } catch (Exception ignore) {
-        }
-        try {
-            new URL(baseUrl, "/indicator/slow-1000ms").openStream().close();
-        } catch (Exception ignore) {
-        }
+        callEndpoint("/indicator/slow-2000ms");
+        callEndpoint("/indicator/slow-1000ms");
 
         //high load endpoint indicator
         for (int i = 0; i < 4; i++) {
-            try {
-                new URL(baseUrl, "/indicator/high-load-four-per-second").openStream().close();
-            } catch (Exception ignore) {
-            }
+            callEndpoint("/indicator/high-load-four-per-second");
         }
         for (int i = 0; i < 2; i++) {
+            callEndpoint("/indicator/high-load-two-per-second");
+        }
+    }
+
+    private static void callEndpoint(String endpoint) {
+        executor.execute(() -> {
             try {
-                new URL(baseUrl, "/indicator/high-load-two-per-second").openStream().close();
+                new URL("http://localhost:8080" + endpoint).openStream().close();
             } catch (Exception ignore) {
             }
-        }
+        });
     }
 }
