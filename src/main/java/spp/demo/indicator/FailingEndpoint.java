@@ -12,14 +12,6 @@ public class FailingEndpoint {
         return HttpResponse.serverError();
     }
 
-    @Get("/fail-75-percent")
-    public HttpResponse<Void> fail75Percent() {
-        if (Math.random() > 0.25) {
-            return HttpResponse.serverError();
-        }
-        return HttpResponse.ok();
-    }
-
     @Get("/fail-50-percent")
     public HttpResponse<Void> fail50Percent() {
         if (Math.random() > 0.5) {

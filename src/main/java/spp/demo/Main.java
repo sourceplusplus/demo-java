@@ -49,10 +49,6 @@ public class Main {
         } catch (Exception ignore) {
         }
         try {
-            new URL(baseUrl, "/indicator/fail-75-percent").openStream().close();
-        } catch (Exception ignore) {
-        }
-        try {
             new URL(baseUrl, "/indicator/fail-50-percent").openStream().close();
         } catch (Exception ignore) {
         }
