@@ -20,9 +20,7 @@ Once the plugin is installed, check out the demos below. Each demo contains inst
 
 > Note: You do not need to run this code to play with the demos. This application is hosted on our publicly accessible servers.
 
-## Demos
-
-### Live Commands
+## Demo: Live Commands
 
 > Live Commands allow you to execute user-defined actions. These commands have access to application runtime data and
 > can be used to gather metrics, trigger alerts, or perform other actions.
@@ -42,7 +40,7 @@ increasing the verbosity of a running application with logs that output directly
 This demonstration shows how to follow existing logs from a running application. The **Tail Logs** command works with
 most logging frameworks, including Log4j, Logback, and SLF4J.
 
-### Live Indicators
+## Demo: Live Indicators
 
 > Live Indicators allow you to automatically display user-defined metrics in the IDE. These metrics can be used to
 > monitor the health of your application or provide insight into the current state of the application.
