@@ -68,13 +68,13 @@ public class Main {
         //high load endpoint indicator
         for (int i = 0; i < 4; i++) {
             try {
-                new URL(baseUrl, "/high-load-four-per-second").openStream().close();
+                new URL(baseUrl, "/indicator/high-load-four-per-second").openStream().close();
             } catch (Exception ignore) {
             }
         }
         for (int i = 0; i < 2; i++) {
             try {
-                new URL(baseUrl, "/high-load-two-per-second").openStream().close();
+                new URL(baseUrl, "/indicator/high-load-two-per-second").openStream().close();
             } catch (Exception ignore) {
             }
         }
