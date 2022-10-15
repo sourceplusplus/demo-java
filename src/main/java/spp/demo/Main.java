@@ -44,12 +44,24 @@ public class Main {
 
     public static void triggerEndpoints() throws Exception {
         URL baseUrl = new URL("http://localhost:8080");
+
+        //failing endpoint indicator
         try {
             new URL(baseUrl, "/indicator/fail-100-percent").openStream().close();
         } catch (Exception ignore) {
         }
         try {
             new URL(baseUrl, "/indicator/fail-50-percent").openStream().close();
+        } catch (Exception ignore) {
+        }
+
+        //slow endpoint indicator
+        try {
+            new URL(baseUrl, "/indicator/slow-2000ms").openStream().close();
+        } catch (Exception ignore) {
+        }
+        try {
+            new URL(baseUrl, "/indicator/slow-1000ms").openStream().close();
         } catch (Exception ignore) {
         }
     }
