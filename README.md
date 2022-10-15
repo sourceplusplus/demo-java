@@ -22,20 +22,35 @@ Once the plugin is installed, check out the demos below. Each demo contains inst
 
 ## Demos
 
-### [Add Breakpoint](./src/main/java/spp/demo/command/AddBreakpoint.java)
+### Live Commands
+
+> Live Commands allow you to execute user-defined actions. These commands have access to application runtime data and
+> can be used to gather metrics, trigger alerts, or perform other actions.
+
+#### [Add Breakpoint](./src/main/java/spp/demo/command/AddBreakpoint.java)
 
 This demonstration shows how to add a "non-breaking breakpoint" to a running application. The **Add Breakpoint** command
 is useful for debugging production applications without impacting the end user.
 
-### [Add Log](./src/main/java/spp/demo/command/AddLog.java)
+#### [Add Log](./src/main/java/spp/demo/command/AddLog.java)
 
 This demonstration shows how to add a log statement to a running application. The **Add Log** command is useful for
 increasing the verbosity of a running application with logs that output directly into the IDE.
 
-### [Tail Logs](./src/main/java/spp/demo/command/TailLogs.java)
+#### [Tail Logs](./src/main/java/spp/demo/command/TailLogs.java)
 
 This demonstration shows how to follow existing logs from a running application. The **Tail Logs** command works with
 most logging frameworks, including Log4j, Logback, and SLF4J.
+
+### Live Indicators
+
+> Live Indicators allow you to automatically display user-defined metrics in the IDE. These metrics can be used to
+> monitor the health of your application or provide insight into the current state of the application.
+
+#### [Failing Endpoint](./src/main/java/spp/demo/indicator/FailingEndpoint.java)
+
+This demonstration shows how failing endpoints can be detected and displayed in the IDE. The **Failing Endpoint**
+indicator is useful for identifying endpoints that are actively failing and require attention.
 
 ## Bugs & Features
 
