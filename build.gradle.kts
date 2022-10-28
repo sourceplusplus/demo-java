@@ -14,7 +14,7 @@ repositories {
 
 dependencies {
     //attaches Source++ probe to the application
-    javaagent("plus.sourceplus.probe:probe-jvm:0.7.0")
+    javaagent("plus.sourceplus.probe:probe-jvm:0.7.3")
 
     //used for the tail logs command
     implementation("org.apache.skywalking:apm-toolkit-logback-1.x:8.12.0")
