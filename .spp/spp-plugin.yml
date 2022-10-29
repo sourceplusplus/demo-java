@@ -1,5 +1,4 @@
 override: true
 service_host: "https://demo.sourceplus.plus"
 access_token: "change-me"
-verify_host: false
 service_name: "demo-java"
