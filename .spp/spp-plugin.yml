@@ -1,5 +1,4 @@
 override: true
-service_host: "https://cloud.sourceplus.plus"
-tenant_id: "tenant1"
+service_host: "https://tenant1.sourceplus.plus"
 access_token: "change-me"
 service_name: "demo-java"
