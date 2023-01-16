@@ -31,4 +31,16 @@ public class AddBreakpoint {
         boolean isEven = randomNumber % 2 == 0;
         System.out.println(randomNumber + " is " + (isEven ? "even" : "odd"));
     }
+
+    /**
+     * The <b>Add Breakpoint</b> command (as well as other live instruments) support PII (Personally Identifiable
+     * Information) redaction. This allows you to safely add breakpoints to code with sensitive data.
+     * <p>
+     * Try adding a breakpoint to output any of the variables below.
+     * </p>
+     */
+    public void breakpointWithRedactedData() {
+        String password = "password123"; // redacted via variable identifier
+        String ssn = "123-45-6789"; // redacted via regex pattern
+    }
 }
