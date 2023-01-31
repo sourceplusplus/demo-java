@@ -8,8 +8,8 @@
 ## What is this?
 
 This project holds Java-based feature demonstrations for [Source++](https://github.com/sourceplusplus/sourceplusplus),
-the open-source live coding platform. These demonstrations are meant to be used as a reference for how to use Source++
-in your own projects.
+the continuous feedback platform for developers. These demonstrations are meant to be used as a reference for how to use
+Source++ in your own projects.
 
 ## How to use?
 
