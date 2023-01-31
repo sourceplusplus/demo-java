@@ -64,11 +64,11 @@ public class Main {
         callEndpoint("/indicator/slow-1000ms");
 
         //high load endpoint indicator
-        for (int i = 0; i < 4; i++) {
-            callEndpoint("/indicator/high-load-four-per-second");
+        for (int i = 0; i < 6; i++) {
+            callEndpoint("/indicator/high-load-six-per-second");
         }
-        for (int i = 0; i < 2; i++) {
-            callEndpoint("/indicator/high-load-two-per-second");
+        for (int i = 0; i < 3; i++) {
+            callEndpoint("/indicator/high-load-three-per-second");
         }
     }
 

@@ -20,18 +20,18 @@ import io.micronaut.http.annotation.Get;
 public class HighLoadEndpoint {
 
     /**
-     * Hover your mouse over the upwards chevron icon on line 26 to see the request rate (~4/second).
+     * Hover your mouse over the upwards chevron icon on line 26 to see the request rate (~6/second).
      */
-    @Get("/high-load-four-per-second")
-    public HttpResponse<Void> highLoad4PerSecond() {
+    @Get("/high-load-six-per-second")
+    public HttpResponse<Void> highLoad6PerSecond() {
         return HttpResponse.ok();
     }
 
     /**
-     * Hover your mouse over the upwards chevron icon on line 34 to see the request rate (~2/second).
+     * Hover your mouse over the upwards chevron icon on line 34 to see the request rate (~3/second).
      */
-    @Get("/high-load-two-per-second")
-    public HttpResponse<Void> highLoad2PerSecond() {
+    @Get("/high-load-three-per-second")
+    public HttpResponse<Void> highLoad3PerSecond() {
         return HttpResponse.ok();
     }
 }
