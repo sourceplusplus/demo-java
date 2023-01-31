@@ -50,8 +50,33 @@ increasing the verbosity of a running application with logs that output directly
 
 #### [Tail Logs](./src/main/java/spp/demo/command/TailLogs.java)
 
+<details>
+<summary>Command Preview</summary>
+<img src="https://raw.githubusercontent.com/sourceplusplus/sourceplusplus/master/.github/media/screencasts/view-logs.gif"/>
+</details>
+
 This demonstration shows how to follow existing logs from a running application. The **Tail Logs** command works with
 most logging frameworks, including Log4j, Logback, and SLF4J.
+
+#### [View Activity](./src/main/java/spp/demo/command/ViewActivity.java)
+
+<details>
+<summary>Command Preview</summary>
+<img src="https://raw.githubusercontent.com/sourceplusplus/sourceplusplus/master/.github/media/screencasts/view-activity.gif"/>
+</details>
+
+This demonstration shows how to view the activity of an endpoint. The **View Activity** command is useful for
+monitoring the throughput, latency, and error rate of a given endpoint.
+
+#### [View Traces](./src/main/java/spp/demo/command/ViewTraces.java)
+
+<details>
+<summary>Command Preview</summary>
+<img src="https://raw.githubusercontent.com/sourceplusplus/sourceplusplus/master/.github/media/screencasts/view-traces.gif"/>
+</details>
+
+This demonstration shows how to view the traces of an endpoint. The **View Traces** command is useful for exploring
+the execution path of a given endpoint.
 
 ## Demo: Live Indicators
 
