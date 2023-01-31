@@ -28,7 +28,7 @@ Once the plugin is installed, check out the demos below. Each demo contains inst
 > Live Commands allow you to execute user-defined actions. These commands have access to application runtime data and
 > can be used to gather metrics, trigger alerts, or perform other actions.
 
-### [Add Breakpoint](./src/main/java/spp/demo/command/AddBreakpoint.java)
+#### [Add Breakpoint](./src/main/java/spp/demo/command/AddBreakpoint.java)
 
 <details>
 <summary>Command Preview</summary>
@@ -38,7 +38,7 @@ Once the plugin is installed, check out the demos below. Each demo contains inst
 This demonstration shows how to add a "non-breaking breakpoint" to a running application. The **Add Breakpoint** command
 is useful for debugging production applications without impacting the end user.
 
-### [Add Log](./src/main/java/spp/demo/command/AddLog.java)
+#### [Add Log](./src/main/java/spp/demo/command/AddLog.java)
 
 <details>
 <summary>Command Preview</summary>
