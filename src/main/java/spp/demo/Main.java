@@ -49,6 +49,10 @@ public class Main {
     }
 
     public static void triggerEndpoints() {
+        //function duration insight
+        callEndpoint("/insight/slow-function");
+        callEndpoint("/insight/fast-function");
+
         //view activity command
         callEndpoint("/command/view-activity");
 
