@@ -4,8 +4,7 @@ import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.client.HttpClient;
-
-import java.net.URL;
+import jakarta.inject.Inject;
 
 /**
  * This class is used to demonstrate the `View Traces` command.
@@ -21,16 +20,17 @@ import java.net.URL;
 @Controller("/command")
 public class ViewTraces {
 
+    @Inject
+    private HttpClient client;
+
     /**
-     * Execute the `View Traces` command with your caret anywhere between lines 30 and 35 to see the traces for
+     * Execute the `View Traces` command with your caret anywhere between lines 32 and 35 to see the traces for
      * the endpoint below. Executing this command will open a list of traces for the given endpoint. Clicking on a
      * trace will open the trace details.
      */
     @Get("/view-traces")
-    public HttpResponse<Void> entryEndpoint() throws Exception {
-        try (HttpClient client = HttpClient.create(new URL("http://localhost:8080"))) {
-            client.toBlocking().retrieve("/command/view-traces/exit");
-        }
+    public HttpResponse<Void> entryEndpoint() {
+        client.toBlocking().retrieve("http://localhost:8080/command/view-traces/exit");
         return HttpResponse.ok();
     }
 

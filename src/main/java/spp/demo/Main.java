@@ -56,8 +56,8 @@ public class Main {
         //view activity command
         callEndpoint("/command/view-activity");
 
-//        //view traces command
-//        callEndpoint("/command/view-traces");
+        //view traces command
+        callEndpoint("/command/view-traces");
 
         //failing endpoint indicator
         callEndpoint("/indicator/fail-100-percent");
@@ -78,7 +78,8 @@ public class Main {
 
     private static void callEndpoint(String endpoint) {
         executor.execute(() -> {
-            try (var ignored = new URL("http://localhost:8080" + endpoint).openStream()) {
+            try {
+                new URL("http://localhost:8080" + endpoint).openStream().close();
             } catch (Exception ignore) {
             }
         });
