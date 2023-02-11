@@ -78,7 +78,8 @@ public class Main {
 
     private static void callEndpoint(String endpoint) {
         executor.execute(() -> {
-            try (var ignored = new URL("http://localhost:8080" + endpoint).openStream()) {
+            try {
+                new URL("http://localhost:8080" + endpoint).openStream().close();
             } catch (Exception ignore) {
             }
         });

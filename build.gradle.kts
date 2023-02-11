@@ -1,7 +1,7 @@
 plugins {
     id("java")
     id("application")
-//    id("com.ryandens.javaagent-application") version "0.3.2"
+    id("com.ryandens.javaagent-application") version "0.3.2"
 }
 
 group = "spp.demo"
@@ -14,7 +14,7 @@ repositories {
 
 dependencies {
     //attaches Source++ probe to the application
-//    javaagent("plus.sourceplus.probe:probe-jvm:0.7.7.1")
+    javaagent("plus.sourceplus.probe:probe-jvm:0.7.7.1")
 
     //used for the tail logs command
     implementation("org.apache.skywalking:apm-toolkit-logback-1.x:8.13.0")

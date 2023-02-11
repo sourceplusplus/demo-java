@@ -30,7 +30,7 @@ public class ViewTraces {
      */
     @Get("/view-traces")
     public HttpResponse<Void> entryEndpoint() {
-        client.toBlocking().retrieve("http://localhost:8080/command/view-traces/exit");
+        //client.toBlocking().retrieve("http://localhost:8080/command/view-traces/exit");
         return HttpResponse.ok();
     }
 
