@@ -32,8 +32,4 @@ dependencies {
 application {
     mainClass.set("spp.demo.Main")
     applicationName = "demo-java"
-    applicationDefaultJvmArgs = listOf(
-        "-XX:+HeapDumpOnOutOfMemoryError",
-        "-XX:HeapDumpPath=/tmp/demo-java.hprof"
-    )
 }
