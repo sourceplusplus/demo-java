@@ -31,7 +31,7 @@ public class ViewTraces {
     public HttpResponse<Void> entryEndpoint() throws Exception {
         try (HttpClient client = HttpClient.create(new URL("http://localhost:8080"))) {
             try (BlockingHttpClient blocking = client.toBlocking()) {
-                blocking.retrieve("/command/view-traces/exit");
+                //blocking.retrieve("/command/view-traces/exit");
             }
         }
         return HttpResponse.ok();
