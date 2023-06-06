@@ -1,6 +1,10 @@
 spp:
   platform_host: "localhost"
   platform_port: 12800
+  authentication:
+    client_id: "test-id"
+    client_secret: "test-secret"
+    tenant_id: "tenant1"
 skywalking:
   logging:
     level: "WARN"
