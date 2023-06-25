@@ -5,6 +5,11 @@ import org.junit.jupiter.api.Test;
 public class TestHealthIndicator {
 
     @Test
+    public void success() {
+        // do nothing
+    }
+
+    @Test
     public void fail100Percent() {
         throw new RuntimeException("fail 100%");
     }
