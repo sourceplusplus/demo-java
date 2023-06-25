@@ -1,7 +1,7 @@
 plugins {
     id("java")
     id("application")
-    id("com.ryandens.javaagent-application") version "0.3.2"
+    id("com.ryandens.javaagent-test") version "0.4.2"
 }
 
 group = "spp.demo"
@@ -27,9 +27,18 @@ dependencies {
     //used for endpoint indicators
     implementation("io.micronaut:micronaut-http-server-netty:3.6.4")
     annotationProcessor("io.micronaut:micronaut-inject-java:3.6.4")
+
+    //used for test indicators
+    testJavaagent("plus.sourceplus.probe:probe-jvm:0.7.9-SNAPSHOT")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
 }
 
 application {
     mainClass.set("spp.demo.Main")
     applicationName = "demo-java"
+}
+
+tasks.test {
+    useJUnitPlatform()
 }
