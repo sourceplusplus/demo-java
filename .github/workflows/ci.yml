@@ -1,6 +1,6 @@
 name: Java CI
 
-on: [ push ]
+on: [ push, workflow_dispatch ]
 
 env:
   SPP_PROBE_WAIT_FOR_PLATFORM: "true"
