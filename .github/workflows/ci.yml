@@ -1,6 +1,6 @@
 name: Java CI
 
-on: [push]
+on: [ push ]
 
 env:
   SPP_PROBE_WAIT_FOR_PLATFORM: "true"
@@ -28,3 +28,8 @@ jobs:
         uses: gradle/gradle-build-action@749f47bda3e44aa060e82d7b3ef7e40d953bd629
         with:
           arguments: build
+      - name: Upload skywalking-api.log
+        uses: actions/upload-artifact@v2
+        with:
+          name: skywalking-api.log
+          path: /tmp/spp-probe/logs/skywalking-api.log
