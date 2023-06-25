@@ -31,9 +31,7 @@ jobs:
       - name: Upload skywalking-api.log
         if: ${{ always() }}
         run: |
-          ls -l /tmp
-          ls -l /tmp/spp-probe/logs
-          cat /tmp/spp-probe/logs/skywalking-api.log
+          ls -l /tmp/spp-probe
       - name: Upload skywalking-api.log
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
