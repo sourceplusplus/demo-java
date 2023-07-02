@@ -1,6 +1,7 @@
 plugins {
     id("java")
     id("application")
+    id("com.ryandens.javaagent-application") version "0.4.2"
     id("com.ryandens.javaagent-test") version "0.4.2"
 }
 
