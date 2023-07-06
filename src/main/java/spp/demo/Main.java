@@ -82,7 +82,9 @@ public class Main {
     private static void callEndpoint(String endpoint) {
         executor.execute(() -> {
             try {
+                System.out.println("Calling endpoint: " + endpoint);
                 new URL("http://localhost:8080" + endpoint).openStream().close();
+                System.out.println("Called endpoint: " + endpoint);
             } catch (Exception ignore) {
             }
         });
