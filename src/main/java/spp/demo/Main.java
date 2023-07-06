@@ -19,6 +19,9 @@ public class Main {
         while (true) {
             executeDemos();
             Thread.sleep(1000);
+
+            int threadCount = Thread.activeCount();
+            System.out.println("Thread count: " + threadCount);
         }
     }
 
