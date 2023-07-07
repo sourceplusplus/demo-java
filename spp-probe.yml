@@ -1,5 +1,5 @@
 spp:
-  enabled: ${SPP_PROBE_ENABLED:-true}
+  enabled: ${SPP_PROBE_ENABLED:-false}
   authentication:
     client_id: ${SPP_PROBE_CLIENT_ID:-test-id}
     client_secret: ${SPP_PROBE_CLIENT_SECRET:-test-secret}
