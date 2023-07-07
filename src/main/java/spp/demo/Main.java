@@ -66,24 +66,24 @@ public class Main {
 //        callEndpoint("/insight/slow-function");
 //        callEndpoint("/insight/fast-function");
 
-        //view activity command
-        callEndpoint("/command/view-activity");
-
-        //view traces command
-        callEndpoint("/command/view-traces");
-
-        //failing endpoint indicator
-        callEndpoint("/indicator/fail-100-percent");
-        callEndpoint("/indicator/fail-50-percent");
-
-        //slow endpoint indicator
-        callEndpoint("/indicator/slow-2000ms");
-        callEndpoint("/indicator/slow-1000ms");
-
-        //high load endpoint indicator
-        for (int i = 0; i < 6; i++) {
-            callEndpoint("/indicator/high-load-six-per-second");
-        }
+//        //view activity command
+//        callEndpoint("/command/view-activity");
+//
+//        //view traces command
+//        callEndpoint("/command/view-traces");
+//
+//        //failing endpoint indicator
+//        callEndpoint("/indicator/fail-100-percent");
+//        callEndpoint("/indicator/fail-50-percent");
+//
+//        //slow endpoint indicator
+//        callEndpoint("/indicator/slow-2000ms");
+//        callEndpoint("/indicator/slow-1000ms");
+//
+//        //high load endpoint indicator
+//        for (int i = 0; i < 6; i++) {
+//            callEndpoint("/indicator/high-load-six-per-second");
+//        }
         for (int i = 0; i < 3; i++) {
             callEndpoint("/indicator/high-load-three-per-second");
         }
@@ -104,7 +104,8 @@ public class Main {
                 connection = (HttpURLConnection) url.openConnection();
                 connection.setConnectTimeout(10_000);
                 connection.setReadTimeout(10_000);
-                connection.getResponseCode();
+                int responseCode = connection.getResponseCode();
+                System.out.println("Response code: " + responseCode);
             } catch (Exception ignore) {
             } finally {
                 if (connection != null) {
