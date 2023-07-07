@@ -28,9 +28,9 @@ public class ViewTraces {
      */
     @Get("/view-traces")
     public HttpResponse<Void> entryEndpoint() throws Exception {
-        try (HttpClient client = HttpClient.create(new URL("http://localhost:8080"))) {
-            client.toBlocking().retrieve("/command/view-traces/exit");
-        }
+//        try (HttpClient client = HttpClient.create(new URL("http://localhost:8080"))) {
+//            client.toBlocking().retrieve("/command/view-traces/exit");
+//        }
         return HttpResponse.ok();
     }
 
