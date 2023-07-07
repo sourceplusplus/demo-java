@@ -72,10 +72,10 @@ public class Main {
 //        //view traces command
 //        callEndpoint("/command/view-traces");
 //
-//        //failing endpoint indicator
-//        callEndpoint("/indicator/fail-100-percent");
-//        callEndpoint("/indicator/fail-50-percent");
-//
+        //failing endpoint indicator
+        callEndpoint("/indicator/fail-100-percent");
+        callEndpoint("/indicator/fail-50-percent");
+
         //slow endpoint indicator
         callEndpoint("/indicator/slow-2000ms");
         callEndpoint("/indicator/slow-1000ms");
