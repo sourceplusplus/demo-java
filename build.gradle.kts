@@ -16,6 +16,7 @@ repositories {
 dependencies {
     implementation("io.dropwizard.metrics:metrics-core:4.2.19")
     implementation("io.micronaut:micronaut-management:3.9.4")
+    implementation("io.projectreactor:reactor-core:3.4.16")
 
     //attaches Source++ probe to the application
     javaagent("plus.sourceplus.probe:probe-jvm:0.7.9-SNAPSHOT")
