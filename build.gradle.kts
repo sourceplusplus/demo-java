@@ -15,7 +15,7 @@ repositories {
 
 dependencies {
     implementation("io.dropwizard.metrics:metrics-core:4.2.19")
-    implementation("io.micronaut:micronaut-management:3.6.4")
+    implementation("io.micronaut:micronaut-management:3.9.4")
 
     //attaches Source++ probe to the application
     javaagent("plus.sourceplus.probe:probe-jvm:0.7.9-SNAPSHOT")
@@ -26,11 +26,11 @@ dependencies {
     implementation("ch.qos.logback:logback-classic:1.4.1")
 
     //used for view traces command
-    implementation("io.micronaut:micronaut-http-client:3.6.4")
+    implementation("io.micronaut:micronaut-http-client:3.9.4")
 
     //used for endpoint indicators
-    implementation("io.micronaut:micronaut-http-server-netty:3.6.4")
-    annotationProcessor("io.micronaut:micronaut-inject-java:3.6.4")
+    implementation("io.micronaut:micronaut-http-server-netty:3.9.4")
+    annotationProcessor("io.micronaut:micronaut-inject-java:3.9.4")
 
     //used for test indicators
     testJavaagent("plus.sourceplus.probe:probe-jvm:0.7.9-SNAPSHOT")
