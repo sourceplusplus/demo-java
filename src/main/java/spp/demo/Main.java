@@ -80,10 +80,10 @@ public class Main {
 //        callEndpoint("/indicator/slow-2000ms");
 //        callEndpoint("/indicator/slow-1000ms");
 //
-//        //high load endpoint indicator
-//        for (int i = 0; i < 6; i++) {
-//            callEndpoint("/indicator/high-load-six-per-second");
-//        }
+        //high load endpoint indicator
+        for (int i = 0; i < 6; i++) {
+            callEndpoint("/indicator/high-load-six-per-second");
+        }
         for (int i = 0; i < 3; i++) {
             callEndpoint("/indicator/high-load-three-per-second");
         }
