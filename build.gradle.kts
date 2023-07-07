@@ -14,6 +14,7 @@ repositories {
 }
 
 dependencies {
+    implementation("io.dropwizard.metrics:metrics-core:4.2.19")
     implementation("io.micronaut:micronaut-management:3.6.4")
 
     //attaches Source++ probe to the application
