@@ -28,14 +28,15 @@ public class ViewTraces {
      */
     @Get("/view-traces")
     public HttpResponse<Void> entryEndpoint() throws Exception {
-//        try (HttpClient client = HttpClient.create(new URL("http://localhost:8080"))) {
-//            client.toBlocking().retrieve("/command/view-traces/exit");
-//        }
-        return HttpResponse.ok();
+        try (HttpClient client = HttpClient.create(new URL("http://localhost:8080"))) {
+            return client.toBlocking().exchange("/command/view-traces/exit");
+        } catch (Exception e) {
+            return HttpResponse.serverError();
+        }
     }
 
     @Get("/view-traces/exit")
-    public HttpResponse<String> exitEndpoint() {
-        return HttpResponse.ok("Success");
+    public HttpResponse<Void> exitEndpoint() {
+        return HttpResponse.ok();
     }
 }
