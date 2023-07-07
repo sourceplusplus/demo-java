@@ -5,7 +5,9 @@ import spp.demo.command.AddBreakpoint;
 import spp.demo.command.AddLog;
 import spp.demo.command.TailLogs;
 
+import java.io.InputStream;
 import java.net.URL;
+import java.util.Map;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
@@ -22,6 +24,16 @@ public class Main {
 
             int threadCount = Thread.activeCount();
             System.out.println("Thread count: " + threadCount);
+
+            Map<Thread, StackTraceElement[]> threads = Thread.getAllStackTraces();
+            for (Map.Entry<Thread, StackTraceElement[]> entry : threads.entrySet()) {
+                Thread thread = entry.getKey();
+                StackTraceElement[] stackTraceElements = entry.getValue();
+                System.out.println("Thread: " + thread.getName());
+                for (StackTraceElement stackTraceElement : stackTraceElements) {
+                    System.out.println("    " + stackTraceElement);
+                }
+            }
         }
     }
 
@@ -82,9 +94,9 @@ public class Main {
     private static void callEndpoint(String endpoint) {
         executor.execute(() -> {
             try {
-                System.out.println("Calling endpoint: " + endpoint);
-                new URL("http://localhost:8080" + endpoint).openStream().close();
-                System.out.println("Called endpoint: " + endpoint);
+                //noinspection EmptyTryBlock
+                try (InputStream ignore = new URL("http://localhost:8080" + endpoint).openStream()) {
+                }
             } catch (Exception ignore) {
             }
         });
