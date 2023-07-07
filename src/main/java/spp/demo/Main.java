@@ -102,8 +102,8 @@ public class Main {
             HttpURLConnection connection = null;
             try {
                 connection = (HttpURLConnection) url.openConnection();
-                connection.setConnectTimeout(5000);
-                connection.setReadTimeout(5000);
+                connection.setConnectTimeout(10_000);
+                connection.setReadTimeout(10_000);
                 connection.getResponseCode();
             } catch (Exception ignore) {
             } finally {
