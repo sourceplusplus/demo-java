@@ -76,10 +76,10 @@ public class Main {
 //        callEndpoint("/indicator/fail-100-percent");
 //        callEndpoint("/indicator/fail-50-percent");
 //
-//        //slow endpoint indicator
-//        callEndpoint("/indicator/slow-2000ms");
-//        callEndpoint("/indicator/slow-1000ms");
-//
+        //slow endpoint indicator
+        callEndpoint("/indicator/slow-2000ms");
+        callEndpoint("/indicator/slow-1000ms");
+
         //high load endpoint indicator
         for (int i = 0; i < 6; i++) {
             callEndpoint("/indicator/high-load-six-per-second");
