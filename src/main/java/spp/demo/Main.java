@@ -1,36 +1,34 @@
 package spp.demo;
 
+import com.codahale.metrics.ConsoleReporter;
+import com.codahale.metrics.MetricRegistry;
+import com.codahale.metrics.Timer;
 import io.micronaut.runtime.Micronaut;
 import spp.demo.command.AddBreakpoint;
 import spp.demo.command.AddLog;
 import spp.demo.command.TailLogs;
 
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Map;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 public class Main {
 
     private static final Executor executor = Executors.newCachedThreadPool();
+    private static final MetricRegistry metricRegistry = new MetricRegistry();
 
     public static void main(String[] args) throws Exception {
         Micronaut.run(Main.class, args);
+
+        ConsoleReporter reporter = ConsoleReporter.forRegistry(metricRegistry).build();
 
         while (true) {
             executeDemos();
             Thread.sleep(1000);
 
-            Map<Thread, StackTraceElement[]> threads = Thread.getAllStackTraces();
-            for (Map.Entry<Thread, StackTraceElement[]> entry : threads.entrySet()) {
-                Thread thread = entry.getKey();
-                StackTraceElement[] stackTraceElements = entry.getValue();
-                System.out.println("Thread: " + thread.getName());
-                for (StackTraceElement stackTraceElement : stackTraceElements) {
-                    System.out.println("    " + stackTraceElement);
-                }
-            }
+            reporter.report();
 
             int threadCount = Thread.activeCount();
             System.out.println("Thread count: " + threadCount);
@@ -92,15 +90,27 @@ public class Main {
     }
 
     private static void callEndpoint(String endpoint) {
+        Timer.Context timer = metricRegistry.timer(endpoint).time();
+        URL url;
+        try {
+            url = new URL("http://localhost:8080" + endpoint);
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        }
+
         executor.execute(() -> {
+            HttpURLConnection connection = null;
             try {
-                URL url = new URL("http://localhost:8080" + endpoint);
-                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                connection = (HttpURLConnection) url.openConnection();
                 connection.setConnectTimeout(5000);
                 connection.setReadTimeout(5000);
                 connection.getResponseCode();
-                connection.disconnect();
             } catch (Exception ignore) {
+            } finally {
+                if (connection != null) {
+                    connection.disconnect();
+                }
+                timer.close();
             }
         });
     }
