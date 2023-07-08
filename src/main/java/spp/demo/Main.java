@@ -1,8 +1,5 @@
 package spp.demo;
 
-import com.codahale.metrics.ConsoleReporter;
-import com.codahale.metrics.MetricRegistry;
-import com.codahale.metrics.Timer;
 import io.micronaut.runtime.Micronaut;
 import spp.demo.command.AddBreakpoint;
 import spp.demo.command.AddLog;
@@ -17,21 +14,13 @@ import java.util.concurrent.Executors;
 public class Main {
 
     private static final Executor executor = Executors.newCachedThreadPool();
-    private static final MetricRegistry metricRegistry = new MetricRegistry();
 
     public static void main(String[] args) throws Exception {
         Micronaut.run(Main.class, args);
 
-        ConsoleReporter reporter = ConsoleReporter.forRegistry(metricRegistry).build();
-
         while (true) {
             executeDemos();
             Thread.sleep(1000);
-
-            reporter.report();
-
-            int threadCount = Thread.activeCount();
-            System.out.println("Thread count: " + threadCount);
         }
     }
 
@@ -90,7 +79,6 @@ public class Main {
     }
 
     private static void callEndpoint(String endpoint) {
-        Timer.Context timer = metricRegistry.timer(endpoint).time();
         URL url;
         try {
             url = new URL("http://localhost:8080" + endpoint);
@@ -104,14 +92,12 @@ public class Main {
                 connection = (HttpURLConnection) url.openConnection();
                 connection.setConnectTimeout(10_000);
                 connection.setReadTimeout(10_000);
-                int responseCode = connection.getResponseCode();
-                System.out.println("Response code: " + responseCode);
+                connection.getResponseCode();
             } catch (Exception ignore) {
             } finally {
                 if (connection != null) {
                     connection.disconnect();
                 }
-                timer.close();
             }
         });
     }
