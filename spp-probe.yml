@@ -13,7 +13,7 @@ spp:
 
 skywalking:
   logging:
-    level: "DEBUG"
+    level: ${SW_LOGGING_LEVEL:-INFO}
   agent:
     service_name: "demo-java"
 

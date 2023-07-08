@@ -36,10 +36,6 @@ jobs:
           arguments: build
       - name: Upload skywalking-api.log
         if: ${{ always() }}
-        run: |
-          ls -l /tmp/spp-probe
-      - name: Upload skywalking-api.log
-        if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
           name: skywalking-api.log
