@@ -15,9 +15,4 @@ skywalking:
   logging:
     level: ${SW_LOGGING_LEVEL:-INFO}
   agent:
-    service_name: "demo-java"
-
-application:
-  environment: "ci"
-  version: "1.0.0"
-  git_commit: "8d9b0d9"
+    service_name: ${SW_AGENT_NAME:-demo-java}
