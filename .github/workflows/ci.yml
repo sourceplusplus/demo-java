@@ -3,7 +3,6 @@ name: Java CI
 on: [ push, workflow_dispatch ]
 
 env:
-  SPP_PROBE_WAIT_FOR_PLATFORM: "true"
   SPP_PROBE_PLATFORM_HOST: "https://cloud.sourceplus.plus"
   SPP_PROBE_SSL_ENABLED: "true"
   SPP_PROBE_CLIENT_ID: "spp_ci_pycVI2zIryWRtymsLnHXx39aM88c1Yi6jJYEFw306iFUXTczlx"
