@@ -1,10 +1,10 @@
 name: Java CI
 
 on:
-  - push
-  - workflow_dispatch
-  - schedule:
-      - cron: '0 * * * *' #run every hour
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 * * * *' #run every hour
 
 env:
   SPP_PROBE_PLATFORM_HOST: "https://cloud.sourceplus.plus"
