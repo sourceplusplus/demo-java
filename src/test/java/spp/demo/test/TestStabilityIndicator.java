@@ -3,10 +3,10 @@ package spp.demo.test;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-public class TestStabilityTest {
+public class TestStabilityIndicator {
 
     @Test
-    public void success100Percent() {
+    public void success() {
     }
 
     @Test
@@ -18,6 +18,13 @@ public class TestStabilityTest {
     public void fail50Percent() {
         if (Math.random() > 0.5) {
             throw new RuntimeException("fail 50%");
+        }
+    }
+
+    @Test
+    public void fail25Percent() {
+        if (Math.random() > 0.75) {
+            throw new RuntimeException("fail 25%");
         }
     }
 
