@@ -18,7 +18,7 @@ dependencies {
     implementation("io.projectreactor:reactor-core:3.4.16")
 
     //attaches Source++ probe to the application
-    javaagent("plus.sourceplus.probe:probe-jvm:0.7.9-SNAPSHOT")
+    javaagent("plus.sourceplus.probe:probe-jvm:0.7.10-SNAPSHOT")
 
     //used for the tail logs command
     implementation("org.apache.skywalking:apm-toolkit-logback-1.x:8.15.0")
@@ -33,7 +33,7 @@ dependencies {
     annotationProcessor("io.micronaut:micronaut-inject-java:3.9.4")
 
     //used for test indicators
-    testJavaagent("plus.sourceplus.probe:probe-jvm:0.7.9-SNAPSHOT")
+    testJavaagent("plus.sourceplus.probe:probe-jvm:0.7.10-SNAPSHOT")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
 }
