@@ -10,6 +10,9 @@ spp:
   delete_probe_directory_on_boot: ${SPP_PROBE_DELETE_PROBE_DIRECTORY_ON_BOOT:-false}
   wait_for_platform: ${SPP_PROBE_WAIT_FOR_PLATFORM:-true}
   quiet_mode: ${SPP_PROBE_QUIET_MODE:-false}
+  application:
+    environment: ${SPP_APPLICATION_ENVIRONMENT:-}
+    version: ${SPP_APPLICATION_VERSION:-}
 
 skywalking:
   logging:
